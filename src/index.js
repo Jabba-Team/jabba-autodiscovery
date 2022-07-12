@@ -12,22 +12,23 @@ module.exports = async (m = _ => _) => {
       .then((data) => ({ns: 'graalvm-ee', require: ['otn-account'], data})),
     node('github-com-shyiko-jabba-index-zulu.js')
       .then((data) => ({ns: 'zulu', data})),
-    node('azul-com.js'),
+    // node('azul-api.js',),
+    // node('azul-com.js'),
     node('github-com-corretto.js corretto/corretto-8')
       .then((data) => ({ns: 'amazon-corretto', data})),
     node('github-com-corretto.js corretto/corretto-11')
       .then((data) => ({ns: 'amazon-corretto', data})),
     node('github-com-bell-sw-liberica.js')
       .then((data) => ({ns: 'liberica', data})),
-    node('adoptopenjdk-net-v2.js https://api.adoptopenjdk.net/v2/info/releases/openjdk8'),
-    node('adoptopenjdk-net-v2.js https://api.adoptopenjdk.net/v2/info/releases/openjdk9'),
-    node('adoptopenjdk-net-v2.js https://api.adoptopenjdk.net/v2/info/releases/openjdk10'),
-    node('adoptopenjdk-net-v2.js https://api.adoptopenjdk.net/v2/info/releases/openjdk11'),
-    node('adoptopenjdk-net-v2.js https://api.adoptopenjdk.net/v2/info/releases/openjdk12'),
-    node('adoptopenjdk-net-v2.js https://api.adoptopenjdk.net/v2/info/releases/openjdk13'),
-    node('adoptopenjdk-net-v2.js https://api.adoptopenjdk.net/v2/info/releases/openjdk14'),
-    node('adoptopenjdk-net-v2.js https://api.adoptopenjdk.net/v2/info/releases/openjdk15'),
-    node('adoptopenjdk-net-v2.js https://api.adoptopenjdk.net/v2/info/releases/openjdk16'),
+    // node('adoptopenjdk-net-v2.js https://api.adoptopenjdk.net/v2/info/releases/openjdk8'),
+    // node('adoptopenjdk-net-v2.js https://api.adoptopenjdk.net/v2/info/releases/openjdk9'),
+    // node('adoptopenjdk-net-v2.js https://api.adoptopenjdk.net/v2/info/releases/openjdk10'),
+    // node('adoptopenjdk-net-v2.js https://api.adoptopenjdk.net/v2/info/releases/openjdk11'),
+    // node('adoptopenjdk-net-v2.js https://api.adoptopenjdk.net/v2/info/releases/openjdk12'),
+    // node('adoptopenjdk-net-v2.js https://api.adoptopenjdk.net/v2/info/releases/openjdk13'),
+    // node('adoptopenjdk-net-v2.js https://api.adoptopenjdk.net/v2/info/releases/openjdk14'),
+    // node('adoptopenjdk-net-v2.js https://api.adoptopenjdk.net/v2/info/releases/openjdk15'),
+    // node('adoptopenjdk-net-v2.js https://api.adoptopenjdk.net/v2/info/releases/openjdk16'),
     // todo: Project Amber (https://adoptopenjdk.net/nightly.html?variant=amber)
     node('builds-shipilev-net.js https://builds.shipilev.net/openjdk-shenandoah-jdk8/')
       .then((data) => ({ns: 'openjdk-shenandoah', data})),

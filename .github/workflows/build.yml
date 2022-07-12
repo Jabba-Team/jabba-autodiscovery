@@ -2,11 +2,12 @@ name: NodeJS
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment: build
 
     strategy:
       matrix:
@@ -21,6 +22,8 @@ jobs:
         node-version: ${{ matrix.node-version }}
 
     - name: Build
+      env:
+        JABBA_TOKEN: ${{ secrets.JABBA_TOKEN }}
       run: |
         npm install
         ./sync.sh
